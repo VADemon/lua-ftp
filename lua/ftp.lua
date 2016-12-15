@@ -147,8 +147,8 @@ function ftp:noop()
   return false, f
 end
 
-function ftp:list()
-  return self:list_('list', self:path())
+function ftp:list(remote_file_path)
+  return self:list_('list', remote_file_path or self:path())
 end
 
 function ftp:nlst(mask)
